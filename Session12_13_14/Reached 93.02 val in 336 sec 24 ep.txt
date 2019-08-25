@@ -1,1 +1,5 @@
 
+With V100 paperspace
+in 24 Epoch
+reached 93.02 in 336.11 sec
+with Slanted One cycle LR
