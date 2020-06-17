@@ -1,7 +1,7 @@
 #:kivy 1.0.9
 # ref: https://kivy.org/docs/tutorials/pong.html
 
-<Car>:
+<Truck>:
     size: 20, 10
     origin: 10, 5
     canvas:
@@ -15,7 +15,7 @@
             source: "./images/truck.png"
         PopMatrix
 
-<Pickup>:
+<Mail>:
     size: 25,25
     canvas:
         Color:
@@ -25,7 +25,7 @@
             size: self.size
             source: "./images/mail.png"
 
-<Drop>:
+<Box>:
     size: 1,1
     canvas:
         Color:
@@ -36,21 +36,21 @@
             source: "./images/box.png"
 
 <Game>:
-    car: game_car
-    pickup: game_pickup
-    drop: game_drop
+    truck: game_truck
+    mail: game_mail
+    box: game_box
     canvas:
         Rectangle:
             pos: self.pos
             size: 1429, 660
             source: "./images/citymap.png"
 
-    Car:
-        id: game_car
+    Truck:
+        id: game_truck
         center: self.parent.center
-    Pickup:
-        id: game_pickup
+    Mail:
+        id: game_mail
         center: self.parent.center
-    Drop:
-        id: game_drop
+    Box:
+        id: game_box
         center: self.parent.center
