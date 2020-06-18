@@ -8,6 +8,22 @@ Using TD3 we train a car to move on restricted road area without using sensors
   	- total timesteps, previous state, current sates, action , reward, episode over in each iteration 
   	- total_timesteps, episode count, avg reward over the episode after finishing episode
 
+### State Space
+
+It consists of a cropped image of map , superimposed with the car with the direction the car is pointing to, the orientation of the car w.r.t to goal, and distance moved towards the goal.
+
+### Action Space
+
+Its the angle by which the car turns on road and tries to reach the goal. the range in -3,3
+
+### Reward Policy
+
+- on outside road we give -7
+- on road -1.7
+- on road, and reducing goal distance +0.6
+- boundary -15
+- destination +110
+
 #### Model For Actor and Critic
 
 ```
